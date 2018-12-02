@@ -4,10 +4,9 @@ export default url => {
         request.open('GET', url, true);
 
         request.addEventListener('load', () => {
-            console.log(request.responseText);
             request.status >= 200 && request.status < 400
             ? success(request.response)
-                : fail(new Error(`Request Failed: ${request.statusText}`));
+            : fail(new Error(`Request Failed: ${request.statusText}`));
         });
 
         request.addEventListener('error', () => {
