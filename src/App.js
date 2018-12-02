@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import load from './utils/load';
 import UserList from './components/UserList';
+import ActiveUser from './components/ActiveUser';
 
 
 class App extends Component {
@@ -40,8 +41,15 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <UserList update={this.updateData} data={this.state.data}/>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-4 col-md-3 col-lg-3">
+                        <ActiveUser data={this.state.data} active={this.state.active} />
+                    </div>
+                    <div className="col-sm-8 col-md-9 col-lg-9">
+                        <UserList data={this.state.data} update={this.updateData} />
+                    </div>
+                </div>
             </div>
         );
     }

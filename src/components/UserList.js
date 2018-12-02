@@ -1,6 +1,6 @@
 import React from 'react';
 import UserData from './UserData';
-// Необходимо импортировать и написанный нами ранее компонент UserData
+
 
 export default ({ data, update }) => {
     return (
@@ -16,7 +16,12 @@ export default ({ data, update }) => {
                 {
                     !data ? <tr><td><p>Loading...</p></td></tr> :
                     data.map((user, index) => {
-                    return (<UserData user={user} index={index} update={update} key={index} />);
+                        return (<UserData
+                            user={user}
+                            index={index}
+                            update={update}
+                            key={index}
+                        />);
                 })}
             </tbody>
         </table>
