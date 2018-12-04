@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import load from './utils/load';
 import UserList from './components/UserList';
 import ActiveUser from './components/ActiveUser';
@@ -55,7 +54,7 @@ class App extends Component {
                         />
                     </div>
                 </div>
-                <div className="row">
+                <div className="row justify-content-center">
                     <div className="col-sm-12">
                         <ToolBar
                             initialData={this.initialData}
