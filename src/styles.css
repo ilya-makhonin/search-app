@@ -1,0 +1,26 @@
+.thumbnail {
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.active-user-name {
+    text-align: center;
+}
+
+.user-not-found {
+    margin-top: 20px;
+}
+
+.toolbar {
+    margin-bottom: 8px;
+}
+
+.btn {
+    margin-right: 8px;
+}
+
+.searchbar {
+    margin-top: 10px;
+}
