@@ -4,7 +4,7 @@ import UserData from './UserData';
 
 export default ({ data, update }) => {
     return (
-        <table className="user-list table table-striped">
+        <table className="user-list table table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
