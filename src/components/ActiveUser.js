@@ -2,13 +2,13 @@ import React from 'react';
 
 export default ({ data, active }) => {
     if (!data || !data[active]) {
-        return <h3>Nothing found!</h3>;
+        return <h3 className="user-not-found">Nothing found!</h3>;
     }
     const user = data[active];
     return (
         <div className="thumbnail">
             <div className="thumbnail-caption">
-                <h3>{user.name}</h3>
+                <h3 className="active-user-name">{user.name}</h3>
                 <table className="user-info table table-responsive">
                     <tbody>
                     <tr>
