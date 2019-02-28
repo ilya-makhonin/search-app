@@ -1,3 +1,10 @@
+/**
+ * This function is not used
+ * @param url: url address of data server
+ * @type string
+ * @return { Promise }
+ */
+
 export default url => {
     return new Promise((success, fail) => {
         const request = new XMLHttpRequest();
