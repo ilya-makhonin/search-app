@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import load from './utils/load';
 import UserList from './components/UserList';
 import ActiveUser from './components/ActiveUser';
 import SearchBar from './components/SearchBar';
 import ToolBar from './components/ToolBar';
+import axios from 'axios';
 
 
 class App extends Component {
@@ -12,13 +12,13 @@ class App extends Component {
         term: '',
         active: 0
     };
-    url = 'https://jsonplaceholder.typicode.com/users';
+    url = 'http://jsonplaceholder.typicode.com/users';
     initialData = [];
 
     loadData = () => {
-        load(this.url)
+        axios(this.url)
             .then(usersJson => {
-                const users = (JSON.parse(usersJson)).map(item => {
+                const users = (usersJson.data).map(item => {
                     return {
                         id: item.id,
                         name: item.name,
