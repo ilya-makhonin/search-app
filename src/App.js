@@ -12,13 +12,13 @@ class App extends Component {
         term: '',
         active: 0
     };
-    url = 'http://jsonplaceholder.typicode.com/users';
+    url = 'http://localhost:4000/users';
     initialData = [];
 
     loadData = () => {
-        axios(this.url)
+        axios.get(this.url)
             .then(usersJson => {
-                const users = (usersJson.data).map(item => {
+                const users = (usersJson).data.map(item => {
                     return {
                         id: item.id,
                         name: item.name,
