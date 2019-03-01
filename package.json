@@ -29,6 +29,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "ts-pnp": "^1.0.1",
+    "typescript": "^3.3.3333"
   }
 }
