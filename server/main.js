@@ -6,7 +6,7 @@ const path = require('path');
 
 let app = express();
 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
